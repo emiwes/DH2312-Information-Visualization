@@ -1,0 +1,677 @@
+ var persons = [
+  {
+    "id":"Person 2",
+    "Total average / person":"4,9",
+    "Programming average":"5,7",
+    "Math average":"4,5",
+    "Graphics":"4,3",
+    "Group":1,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 27",
+    "Total average / person":"6,3",
+    "Programming average":"5,3",
+    "Math average":"6,0",
+    "Graphics":"6,7",
+    "Group":1,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 28",
+    "Total average / person":"4,9",
+    "Programming average":"3,3",
+    "Math average":"6,5",
+    "Graphics":"2,3",
+    "Group":1,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 41",
+    "Total average / person":"6,1",
+    "Programming average":"6,0",
+    "Math average":"8,0",
+    "Graphics":"3,3",
+    "Group":1,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 48",
+    "Total average / person":"5,6",
+    "Programming average":"9,0",
+    "Math average":"5,0",
+    "Graphics":"4,0",
+    "Group":1,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 7",
+    "Total average / person":"6,7",
+    "Programming average":"6,0",
+    "Math average":"9,5",
+    "Graphics":"4,7",
+    "Group":1,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 72",
+    "Total average / person":"3,9",
+    "Programming average":"3,0",
+    "Math average":"2,5",
+    "Graphics":"3,3",
+    "Group":1,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 21",
+    "Total average / person":"4,2",
+    "Programming average":"4,7",
+    "Math average":"3,5",
+    "Graphics":"4,3",
+    "Group":10,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 33",
+    "Total average / person":"6,0",
+    "Programming average":"6,7",
+    "Math average":"6,0",
+    "Graphics":"4,7",
+    "Group":10,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 36",
+    "Total average / person":"6,7",
+    "Programming average":"6,7",
+    "Math average":"6,0",
+    "Graphics":"7,7",
+    "Group":10,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 54",
+    "Total average / person":"5,7",
+    "Programming average":"4,3",
+    "Math average":"6,0",
+    "Graphics":"5,3",
+    "Group":10,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 57",
+    "Total average / person":"5,4",
+    "Programming average":"4,7",
+    "Math average":"7,0",
+    "Graphics":"5,0",
+    "Group":10,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 58",
+    "Total average / person":"5,6",
+    "Programming average":"4,3",
+    "Math average":"6,5",
+    "Graphics":"3,7",
+    "Group":10,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 13",
+    "Total average / person":"5,1",
+    "Programming average":"4,7",
+    "Math average":"4,5",
+    "Graphics":"3,7",
+    "Group":11,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 14",
+    "Total average / person":"5,4",
+    "Programming average":"4,7",
+    "Math average":"3,5",
+    "Graphics":"4,3",
+    "Group":11,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 42",
+    "Total average / person":"6,3",
+    "Programming average":"6,7",
+    "Math average":"6,5",
+    "Graphics":"5,0",
+    "Group":11,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 53",
+    "Total average / person":"5,4",
+    "Programming average":"5,0",
+    "Math average":"5,5",
+    "Graphics":"5,3",
+    "Group":11,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 65",
+    "Total average / person":"7,0",
+    "Programming average":"6,7",
+    "Math average":"5,0",
+    "Graphics":"7,7",
+    "Group":11,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 66",
+    "Total average / person":"4,6",
+    "Programming average":"2,0",
+    "Math average":"4,5",
+    "Graphics":"5,3",
+    "Group":11,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 20",
+    "Total average / person":"3,9",
+    "Programming average":"1,3",
+    "Math average":"5,0",
+    "Graphics":"4,3",
+    "Group":2,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 24",
+    "Total average / person":"5,9",
+    "Programming average":"6,0",
+    "Math average":"5,5",
+    "Graphics":"5,0",
+    "Group":2,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 30",
+    "Total average / person":"7,2",
+    "Programming average":"8,7",
+    "Math average":"4,5",
+    "Graphics":"6,7",
+    "Group":2,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 39",
+    "Total average / person":"4,9",
+    "Programming average":"6,0",
+    "Math average":"3,5",
+    "Graphics":"4,0",
+    "Group":2,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 56",
+    "Total average / person":"3,8",
+    "Programming average":"3,0",
+    "Math average":"3,0",
+    "Graphics":"4,0",
+    "Group":2,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 60",
+    "Total average / person":"7,0",
+    "Programming average":"5,7",
+    "Math average":"8,0",
+    "Graphics":"6,3",
+    "Group":2,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 67",
+    "Total average / person":"4,3",
+    "Programming average":"3,3",
+    "Math average":"5,0",
+    "Graphics":"3,0",
+    "Group":2,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 10",
+    "Total average / person":"5,7",
+    "Programming average":"5,7",
+    "Math average":"6,0",
+    "Graphics":"4,0",
+    "Group":3,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 11",
+    "Total average / person":"4,9",
+    "Programming average":"3,7",
+    "Math average":"7,0",
+    "Graphics":"2,3",
+    "Group":3,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 22",
+    "Total average / person":"5,1",
+    "Programming average":"4,7",
+    "Math average":"3,0",
+    "Graphics":"4,7",
+    "Group":3,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 29",
+    "Total average / person":"4,2",
+    "Programming average":"3,0",
+    "Math average":"5,0",
+    "Graphics":"3,0",
+    "Group":3,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 46",
+    "Total average / person":"7,0",
+    "Programming average":"8,3",
+    "Math average":"5,5",
+    "Graphics":"6,7",
+    "Group":3,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 47",
+    "Total average / person":"6,1",
+    "Programming average":"5,3",
+    "Math average":"5,5",
+    "Graphics":"6,0",
+    "Group":3,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 70",
+    "Total average / person":"6,0",
+    "Programming average":"6,0",
+    "Math average":"3,5",
+    "Graphics":"5,3",
+    "Group":3,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 1",
+    "Total average / person":"6,1",
+    "Programming average":"6,0",
+    "Math average":"6,0",
+    "Graphics":"5,3",
+    "Group":4,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 17",
+    "Total average / person":"4,4",
+    "Programming average":"3,7",
+    "Math average":"3,5",
+    "Graphics":"3,3",
+    "Group":4,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 49",
+    "Total average / person":"7,1",
+    "Programming average":"8,0",
+    "Math average":"6,5",
+    "Graphics":"6,7",
+    "Group":4,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 51",
+    "Total average / person":"4,0",
+    "Programming average":"5,3",
+    "Math average":"3,0",
+    "Graphics":"2,7",
+    "Group":4,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 63",
+    "Total average / person":"6,1",
+    "Programming average":"5,0",
+    "Math average":"5,5",
+    "Graphics":"6,0",
+    "Group":4,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 69",
+    "Total average / person":"4,3",
+    "Programming average":"2,7",
+    "Math average":"5,0",
+    "Graphics":"3,7",
+    "Group":4,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 73",
+    "Total average / person":"4,4",
+    "Programming average":"2,3",
+    "Math average":"4,0",
+    "Graphics":"4,7",
+    "Group":4,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 12",
+    "Total average / person":"4,0",
+    "Programming average":"2,7",
+    "Math average":"6,0",
+    "Graphics":"3,3",
+    "Group":5,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 3",
+    "Total average / person":"5,3",
+    "Programming average":"5,3",
+    "Math average":"4,5",
+    "Graphics":"4,3",
+    "Group":5,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 50",
+    "Total average / person":"4,7",
+    "Programming average":"4,0",
+    "Math average":"4,0",
+    "Graphics":"4,7",
+    "Group":5,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 59",
+    "Total average / person":"5,9",
+    "Programming average":"7,7",
+    "Math average":"3,5",
+    "Graphics":"6,0",
+    "Group":5,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 6",
+    "Total average / person":"4,6",
+    "Programming average":"3,7",
+    "Math average":"6,0",
+    "Graphics":"3,0",
+    "Group":5,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 71",
+    "Total average / person":"6,0",
+    "Programming average":"6,0",
+    "Math average":"4,5",
+    "Graphics":"6,3",
+    "Group":5,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 9",
+    "Total average / person":"6,2",
+    "Programming average":"5,7",
+    "Math average":"6,0",
+    "Graphics":"5,7",
+    "Group":5,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 26",
+    "Total average / person":"4,8",
+    "Programming average":"5,3",
+    "Math average":"4,5",
+    "Graphics":"4,0",
+    "Group":6,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 34",
+    "Total average / person":"5,6",
+    "Programming average":"4,7",
+    "Math average":"5,0",
+    "Graphics":"5,7",
+    "Group":6,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 35",
+    "Total average / person":"4,0",
+    "Programming average":"3,0",
+    "Math average":"2,0",
+    "Graphics":"5,0",
+    "Group":6,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 40",
+    "Total average / person":"5,9",
+    "Programming average":"6,3",
+    "Math average":"5,0",
+    "Graphics":"5,7",
+    "Group":6,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 61",
+    "Total average / person":"6,2",
+    "Programming average":"7,7",
+    "Math average":"5,0",
+    "Graphics":"5,7",
+    "Group":6,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 67",
+    "Total average / person":"4,2",
+    "Programming average":"1,7",
+    "Math average":"4,0",
+    "Graphics":"3,7",
+    "Group":6,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 68",
+    "Total average / person":"5,0",
+    "Programming average":"3,7",
+    "Math average":"6,0",
+    "Graphics":"3,0",
+    "Group":6,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 15",
+    "Total average / person":"4,4",
+    "Programming average":"5,3",
+    "Math average":"4,5",
+    "Graphics":"2,7",
+    "Group":7,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 19",
+    "Total average / person":"6,3",
+    "Programming average":"6,3",
+    "Math average":"5,0",
+    "Graphics":"6,0",
+    "Group":7,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 23",
+    "Total average / person":"6,1",
+    "Programming average":"5,7",
+    "Math average":"4,5",
+    "Graphics":"5,7",
+    "Group":7,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 43",
+    "Total average / person":"3,3",
+    "Programming average":"1,3",
+    "Math average":"4,5",
+    "Graphics":"3,0",
+    "Group":7,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 44",
+    "Total average / person":"6,9",
+    "Programming average":"7,0",
+    "Math average":"5,0",
+    "Graphics":"7,3",
+    "Group":7,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 45",
+    "Total average / person":"5,0",
+    "Programming average":"2,7",
+    "Math average":"5,0",
+    "Graphics":"5,0",
+    "Group":7,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 64",
+    "Total average / person":"4,4",
+    "Programming average":"4,0",
+    "Math average":"5,5",
+    "Graphics":"3,0",
+    "Group":7,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 16",
+    "Total average / person":"4,7",
+    "Programming average":"3,0",
+    "Math average":"2,0",
+    "Graphics":"5,7",
+    "Group":8,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 25",
+    "Total average / person":"6,0",
+    "Programming average":"7,0",
+    "Math average":"7,0",
+    "Graphics":"4,7",
+    "Group":8,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 31",
+    "Total average / person":"4,9",
+    "Programming average":"4,3",
+    "Math average":"6,0",
+    "Graphics":"2,7",
+    "Group":8,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 37",
+    "Total average / person":"5,6",
+    "Programming average":"4,3",
+    "Math average":"5,0",
+    "Graphics":"5,0",
+    "Group":8,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 55",
+    "Total average / person":"2,1",
+    "Programming average":"1,0",
+    "Math average":"3,0",
+    "Graphics":"1,3",
+    "Group":8,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 62",
+    "Total average / person":"6,8",
+    "Programming average":"6,3",
+    "Math average":"6,0",
+    "Graphics":"6,3",
+    "Group":8,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 74",
+    "Total average / person":"4,9",
+    "Programming average":"5,0",
+    "Math average":"5,5",
+    "Graphics":"3,3",
+    "Group":8,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 32",
+    "Total average / person":"6,2",
+    "Programming average":"5,7",
+    "Math average":"6,0",
+    "Graphics":"5,3",
+    "Group":9,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 38",
+    "Total average / person":"3,4",
+    "Programming average":"1,0",
+    "Math average":"6,0",
+    "Graphics":"1,3",
+    "Group":9,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 4 ",
+    "Total average / person":"6,1",
+    "Programming average":"6,7",
+    "Math average":"5,0",
+    "Graphics":"4,7",
+    "Group":9,
+    "Role":"Programmer"
+  },
+  {
+    "id":"Person 5",
+    "Total average / person":"4,7",
+    "Programming average":"4,3",
+    "Math average":"3,0",
+    "Graphics":"4,0",
+    "Group":9,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 52",
+    "Total average / person":"5,2",
+    "Programming average":"4,0",
+    "Math average":"5,5",
+    "Graphics":"5,0",
+    "Group":9,
+    "Role":"Graphics"
+  },
+  {
+    "id":"Person 75",
+    "Total average / person":"4,1",
+    "Programming average":"4,7",
+    "Math average":"3,5",
+    "Graphics":"4,0",
+    "Group":9,
+    "Role":"Math"
+  },
+  {
+    "id":"Person 8",
+    "Total average / person":"5,7",
+    "Programming average":"7,0",
+    "Math average":"5,0",
+    "Graphics":"4,3",
+    "Group":9,
+    "Role":"Programmer"
+  }
+];

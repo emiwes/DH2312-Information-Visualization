@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Projekt 1</title>
+		<script type="text/javascript" src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+		<script src="http://d3js.org/topojson.v1.min.js"></script>
+		<style>
+			body {
+				font-family: Helvetica;
+			}
+			.header{
+				text-align: center;
+			}
+
+			.header div {
+				font-size: 16px;
+				background-color: steelblue;
+				text-align: center;
+				padding: 0 0px;
+				margin: 0 20px;
+				color: white;
+				height: 30px;
+				width: 60px;
+				display: inline-block;
+				line-height: 30px;
+			}
+			.headerText{
+				text-align: center;
+				margin-bottom: 20px;
+			}
+
+			.headerText div{
+				display: inline-block;
+				padding: 0px 0px;
+				margin: 0 20px;
+				text-align: center;
+			}
+
+			.groupHeader{
+				width: 60%;
+				display: inline-block;
+				margin: 0 auto;
+				font-size: 20px;
+				text-align: center;
+			}
+
+			.infoContainerHeader{
+				width: 35%;
+				display: inline-block;
+				margin: 0 auto;
+				font-size: 20px;
+				text-align: center;
+			}
+			.groups{
+				width: 60%;
+				display: inline-block;
+			}
+			.groupNumber {
+				background-color: red;
+				font-size:	30px;
+				font-family: Helvetica;
+				font-weight: lighter; 
+				padding: 0 10px;
+				margin: 20px 30px;
+				color: white;
+				width: 120px;
+				height: 200px;
+				line-height: 200px;
+				display: inline-block;
+				text-align: center;
+			}
+			.averageGroup{
+				margin: -30px auto auto auto;
+				text-align: center;
+				font-size: 13px;
+				line-height: 1;
+			}
+
+			.infoContainer{
+				margin-top:20px;
+				display:inline-block;
+				height:500px;
+				width:35%;
+				position:absolute;
+				left:60%;
+				min-height: 750px;
+				border-style: solid;
+				border-style: 2px;
+				border-color: black;
+				border-radius: 2%;
+				display:inline-block;
+				padding: 5px 5px;
+			}
+		</style>
+	</head>
+	<body style="background-color:rgb(50, 20,200);">
+
+		<div class="header"></div>
+		<div class="headerText"></div>
+		<div class="container" style="position:relative">
+			<div class="groupHeader">Groups</div><div class="infoContainerHeader">Individual Information</div>
+			<div class="groups"></div><div class ="infoContainer"></div>
+		</div>
+
+	</body>
+	<script src="project_1_d3script.js"></script>
+</html>

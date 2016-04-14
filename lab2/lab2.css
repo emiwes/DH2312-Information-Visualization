@@ -1,0 +1,110 @@
+path {
+	stroke: white;
+	stroke-width: 0.5px;
+}
+
+.graphContainer {
+	position: absolute;
+	left: 1%;
+	top: 2%;
+	/*border-style: solid;
+	border-width: 0.5px;
+	border-color: white;
+	border-radius: 1%;*/
+	margin: 0 0;
+	width:25%;
+	height:600px;
+}
+
+.graphCategories {
+	position: absolute;
+	left:0%;
+	top: 49%;
+	color: white;
+}
+
+.graphCategories div {
+	display: inline-block;
+	transform: rotate(-75deg);
+	margin: 0 -8px;
+}
+
+.gapMinderContainer {
+	position: absolute;
+	left: 2%;
+	bottom:	30%;
+	color: white;
+}
+
+.averageHappyContainer {
+	position: absolute;
+	left: 2%;
+	bottom: 25%;
+	color: white;
+}
+
+.worldContainer {
+	position: absolute;
+	left:27%;
+	top: 2%;
+	width:72%;
+	text-align:center;
+}
+
+.rangeContainer{
+	background-color: none;
+	height: 10px;
+	width: 60%;
+	position: absolute;
+	bottom: 15%;
+	left:35%;
+}
+
+.gradient {
+	height: 10px;
+	background: black; /* For browsers that do not support gradients */    
+	background: -webkit-linear-gradient(left, #FF0000 , #00FF5A); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(right, #FF0000, #00FF5A); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(right, #FF0000, #00FF5A); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(to right, #FF0000 , #00FF5A); /* Standard syntax (must be last) */
+}
+
+.countryInfo {
+	position: absolute;
+	left:0;
+	bottom: 0; 
+	display:inline-block;
+}
+
+.selectionOfCountries {
+	position: fixed;
+	left:3%;
+	top: 5%;
+	font-family:Helvetica;
+	/*width:100%;*/
+	color:#B30000;
+}
+
+.selectedCountry {
+	/*fill: pink;*/
+}
+
+.notSelectedCountry {
+	/*fill: steelblue;*/
+}
+
+#globalButton {
+	position: absolute;
+	left: 8%;
+	top: 60%;
+}
+
+#analyticTrail {
+	height: 40px;
+	width: 130px;
+	background-color: orange;
+	border: none;
+	color: white;
+	border-radius: 15px;
+	font-size: 15px;
+}

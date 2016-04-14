@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project 3</title>
+
+	<!-- D3.js files -->
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script src="http://d3js.org/topojson.v0.min.js"></script>
+
+	<!-- Files for getting Data -->
+	<script type="text/javascript" src="js/getData.js"></script>
+	<script type="text/javascript" src="js/handleData.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/lab3.css">
+</head>
+<body>
+	<div class="designBrief" style="position: relative;margin: 50px 0 ">
+		<h1 style="text-align:center;font-weight: lighter">Design Brief</h1>
+		<div style="width:75%;margin: 0 auto">
+			<p>
+				This project consists of two different visualizations of the facebook data of the posts made by the VIC-studio at The Royal Institute of Technology. A matrix chart above and a parallel coordinate chart below.
+			</p>
+			<p>
+				The matrix chart shows <span style="color:PaleVioletRed">all posts</span> made by the VIC-studio between 17:th of feb 2014 and 14:th of feb 2016. By <span style="color:PaleVioletRed">hovering</span> over each square you will get <span style="color:PaleVioletRed">detailed</span> information on the left side of the chart. If you decide to <span style="color:PaleVioletRed">click</span> on a square, the information will be saved to the right side, by doing so you can <span style="color:PaleVioletRed">compare</span> two different posts with each other. 
+			</p>
+			<p>
+				The matrix is also <span style="color:PaleVioletRed">sortable</span> by either 'Date', 'Reach', 'Likes' or 'Type' by clicking one of the buttons above the chart. The sorting is set to 'Date' by default and 'Date' is also the second parameter that's being looked at when sorting by the other parameters.
+			</p>
+			<p>
+				The colour of each square represents intensity of reach, where <span style="color:red">red</span> is low (0 to ~200), <span style="color:green">green</span> is average (~200 to ~600), <span style="color:Turquoise ">turquoise</span> is very high (~600+), and the post with the highest amount of reach is coloured <span style="color:gold">gold</span>. The size of each square does not correlate to any dimension in the data. I only visualize information through place in the matrix (post date) and color of square (reach intensity). This visualization is mainly made for the everyday student taking courses in the studio, but can also provide thoughtful insights for teachers.
+			</p>
+			<p>
+				Below the matrix there is a parallel coordinate chart. Each line represents a post. Each axis can be <span style="color:PaleVioletRed">filtered</span> by clicking the mouse and dragging up or down on the axis. When a filter event appears, the <span style="color:PaleVioletRed">matrix chart is also filtered</span>, and only those posts brushed are shown above in the matrix chart. By clicking on the axis once again, the filter is removed. The Reach axis is scaled by using the d3 sqrt scale, while other other values are scaled linearly, and type is scaled using an ordinal scale. This visualization is for those that want to work a bit more with the data and be able to filter and sort when looking for correlations in it. 
+			</p>
+			<p>
+				The first visualization, the matrix visualization, can be seen as an <span style="color:PaleVioletRed">Ambient</span> or an <span style="color:PaleVioletRed">Artistic</span> visualization, as defined by Pousman et. al (2007). By presenting the data in a way so that a <span style="color:PaleVioletRed">user enjoys</span> looking at it, is one of the arguments that the authors lays forward to define a visualization as artistic or ambient. My visualization can be seen as a piece of modern art, because it is presented in a very abstract way. Also, it hopefully encourages the user to play and explore with it, and to create both <span style="color:PaleVioletRed">analytical</span> and <span style="color:PaleVioletRed">awareness</span> insights of the facebook data (Pousman et. al 2007).
+			</p>
+		</div>
+	</div>
+	<div class="container">
+		<div class="sideContainer">
+			<div id="infoText">
+				<div>Date: <span class="infoTextType" id="date-text"></span></div>
+				<div>Reach: <span class="infoTextType" id="reach-text"></span></div>
+				<div>Like: <span class="infoTextType" id="like-text"></span></div>
+				<div>Engagement: <span class="infoTextType" id="engagement-text"></span></div>
+				<div>Type: <span class="type" id="type-text"></span></div>
+			</div>
+		</div>
+		<div style="width:50%;color:white">
+			<div style="width:100%;text-align: center">
+				<h3>Posts done by VIC-Studio</h3>
+				<button id="sortDateBtn">sort by date</button><button id="sortReachBtn">sort by reach</button><button id="sortLikeBtn">sort by likes</button><button id="sortTypeBtn">group by type</button>
+			</div>
+			<div class="chart"></div>
+		</div>
+		<div class="sideContainer">
+			<div id="postText">
+				<div class="inlineBlock" id="postDate">Date</div> <div class="inlineBlock type" id="postType">- Type</div>
+				<div id="postMessage">Click to see detailed info about post!</div>
+				<div>
+					<img class="reactionIcon" src="img/reach.png"> <span class="infoTextType" id="postReach">0</span> people reached
+				</div>
+				<div>
+					<img class="reactionIcon" src="img/like.png"> <span class="infoTextType" id="postLike">0</span> likes
+				</div>
+				<div>
+					<img class="reactionIcon" src="img/engage.png"> <span class="infoTextType" id="postEngage">0</span> engages
+				</div>
+				<a id="postLink" href="" target="_blank">link to post</a>
+			</div>
+		</div>
+	</div>
+	<div style="font-weight: lighter;width: 100%;margin: 60px 0 20px 0">
+		<h3 style="text-align: center">Parallel Coordinate Chart. Brush to filter the matrix chart above</h3>
+	</div>
+	<div id="parallel-text">
+		<div class="parallelIcons">
+			<img class="reactionIcon" src="img/engage.png"> <span class="infoTextType" id="parallelEngage">0</span> engages
+		</div>
+		<div class="parallelIcons">
+			<img class="reactionIcon" src="img/reach.png"> <span class="infoTextType" id="parallelReach">0</span> people reached
+		</div>
+		<div class="parallelIcons">
+			<img class="reactionIcon" src="img/like.png"> <span class="infoTextType" id="parallelLike">0</span> likes
+		</div>
+		<div class="parallelIcons">
+			<img class="reactionIcon" src="img/share.png"> <span class="infoTextType" id="parallelShare">0</span> shares
+		</div>
+		<div class="parallelIcons">
+			<img class="reactionIcon" src="img/gear.png"> <span class="infoTextType" id="parallelType">post</span> type
+		</div>
+	</div>
+	<div class="parallelChart"></div>
+
+	<!-- Plotting clustered Matrix -->
+	<script type="text/javascript" src="js/clustered.js"></script>
+	<!-- Plotting Parallel Coordinates -->
+	<script type="text/javascript" src="js/parallellData.js"></script>
+</body>
+</html>

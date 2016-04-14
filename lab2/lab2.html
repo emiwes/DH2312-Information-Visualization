@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<title>Project 2</title>
+		<link rel="stylesheet" type="text/css" href="lab2.css">
+	</head>
+
+	<body style="background-color:black">
+		<div style="position:fixed;right:2%;top;2%;z-index:100000"><a target="_blank" href="https://docs.google.com/document/d/1KMLBR3JDlWd1ZTQRZs8aCOCllysIgGDP7qcFFE6hGzU/edit?usp=sharing"><button id="analyticTrail" href="https://docs.google.com/document/d/1KMLBR3JDlWd1ZTQRZs8aCOCllysIgGDP7qcFFE6hGzU/edit?usp=sharing">Analytic Trail!</button></a></div>
+		<div class="selectionOfCountries"></div>
+
+		<div class="gapMinderContainer"></div>
+		<div class="averageHappyContainer"></div>
+		<div class="graphContainer"></div>
+		<div class="graphCategories"><div>Not at all happy</div><div>Not so happy</div><div>Don't Know</div><div>Rather Happy</div><div>Very Happy</div></div>
+		</div>
+		<div class="worldContainer"></div>
+		<div class="rangeContainer">
+			<div>
+				<label style="color:white" for="averageH">Average Happiness (0-100%)</label>
+				<div class="gradient" style="width:100%"></div>
+				<input	type="range" value="0" name="averageH" id="averageH" min="0" max="1" step="0.01" oninput="changeFill(this.value)"style="width:100%"/>
+				<em id="averageHLabel" style="font-style:normal;color:white">0%</em>
+			</div>
+		</div>
+		<button type="data" id="globalButton">Click for World data</button>
+
+		<div style="width:100%;color:#B30000;font-family:Helvetica"><h1 class="countryInfo">Hover over country for average happiness. Click for detailed view!</h1></div>
+
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="http://d3js.org/topojson.v0.min.js"></script>
+		<script type="text/javascript" src="lab2.js"></script>
+	</body>
+</html>
